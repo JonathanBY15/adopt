@@ -13,10 +13,10 @@ with app.app_context():
     Pet.query.delete()
 
     # Add pets
-    pet1 = Pet(name='Bella', species='Dog', photo_url=DEFAULT_IMAGE_URL, age=3, notes='Loves to play fetch.', available=True)
-    pet2 = Pet(name='Max', species='Cat', photo_url=DEFAULT_IMAGE_URL, age=2, notes='Very friendly and playful.', available=True)
-    pet3 = Pet(name='Charlie', species='Rabbit', photo_url=DEFAULT_IMAGE_URL, age=1, notes='Enjoys being petted.', available=False)
-    pet4 = Pet(name='Lucy', species='Bird', photo_url=DEFAULT_IMAGE_URL, age=4, notes='Can mimic sounds.', available=True)
+    pet1 = Pet(name='Bella', species='dog', photo_url=DEFAULT_IMAGE_URL, age=3, notes='Loves to play fetch.', available=True)
+    pet2 = Pet(name='Max', species='cat', photo_url=DEFAULT_IMAGE_URL, age=2, notes='Very friendly and playful.', available=True)
+    pet3 = Pet(name='Charlie', species='cat', photo_url=DEFAULT_IMAGE_URL, age=1, notes='Enjoys being petted.', available=False)
+    pet4 = Pet(name='Lucy', species='dog', photo_url=DEFAULT_IMAGE_URL, age=4, notes='Can mimic sounds.', available=True)
 
     db.session.add_all([pet1, pet2, pet3, pet4])
     db.session.commit()
